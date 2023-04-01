@@ -1,0 +1,10 @@
+.gradient-border {
+  
+    border-color: #3b4ba6;
+    background-color: transparent;
+    padding: 10px 20px;
+    color: #3b4ba6;
+    border-radius: 10%;
+    cursor:pointer;
+    transition: all ease-in-out 0.5s;
+  }
