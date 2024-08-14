@@ -50,11 +50,11 @@ export const Hero = () => {
         </div>
       </div>
       <div className="mb-12 mt-56 border-white/[.03] md:mt-28 lg:my-[13rem] lg:border-y lg:py-2">
-        <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
-          <h1 className="text-5xl font-bold tracking-tight text-white md:text-[40px] md:leading-[1.1] lg:col-span-2 lg:text-[64px] lg:leading-[1.125em]">
+        <div className="mx-auto w-full max-w-7xl px-4 md:px-6 ">
+          <h1 className="text-5xl font-bold tracking-tight  md:text-[40px] md:leading-[1.1] lg:col-span-2 lg:text-[64px] lg:leading-[1.125em]">
             Diego Escurra
           </h1>
-          <h2 className="text-4xl font-bold tracking-tight text-white md:text-[40px] md:leading-[1.1] lg:col-span-2 lg:text-[49px] lg:leading-[1.125em]">
+          <h2 className="text-4xl font-bold tracking-tight  md:text-[40px] md:leading-[1.1] lg:col-span-2 lg:text-[49px] lg:leading-[1.125em]">
             Desarrollador de software
           </h2>
           <div className="mt-8 max-w-lg space-y-6 text-lg leading-[1.4] text-gray-300 md:max-w-xl lg:text-xl">

@@ -12,6 +12,11 @@ body {
   @apply flex min-h-full flex-col bg-gray-900 text-gray-100 antialiased;
 }
 
+h1, h2 {
+  color: white;
+ 
+}
+
 h2 {
   text-wrap: balance;
 }

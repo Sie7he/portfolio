@@ -4,6 +4,7 @@ import './navbar.css'
 
 export const Navbar = () => {
   let lastScrollTop = 0;
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const [active, setActive] = useState('inicio');
 
@@ -11,23 +12,29 @@ export const Navbar = () => {
     setActive(navItem);
   };
 
-  const handleScroll = () => {
-    const navbar = document.querySelector('#navbar')
-    const scrollY = window.scrollY;
-    if (scrollY > lastScrollTop) {
-      navbar.classList.remove('visible')
-    } else if (scrollY < lastScrollTop) {
-      navbar.classList.add('visible')
-
-    }
-    lastScrollTop = scrollY <= 0 ? 0 : scrollY;
-
-  }
   useEffect(() => {
-    document.addEventListener("scroll", handleScroll, { passive: true });
+    const sections = document.querySelectorAll('section'); // Asegúrate de que tus secciones tengan la etiqueta <section>
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          console.log(entry)
+          if (entry.isIntersecting) {
+            setActive(entry.target.id); // Usa el id de la sección como el texto de navegación activo
+          }
+        });
+      },
+      { threshold: 0.7 } // Ajusta el valor del umbral según prefieras
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
 
     return () => {
-      document.removeEventListener("scroll", handleScroll);
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
     };
   }, []);
 
@@ -35,7 +42,7 @@ export const Navbar = () => {
 
   return (
     <header className='flex justify-center relative' >
-      <nav id='navbar' className="visible">
+      <nav id='navbar' >
 
         {nav.map( item => (
         <a
