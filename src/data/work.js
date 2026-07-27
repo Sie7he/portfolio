@@ -1,6 +1,7 @@
 import ranutImage from "../assets/Ranut.png";
 import portteckImage from "../assets/Portteck.png";
 import tehagoelcvImage from "../assets/tehagoelcv.png";
+import barvaraonImage from "../assets/barvaron.png";
 
 export const workItems = [
   // {
@@ -25,6 +26,26 @@ export const workItems = [
   //   },
 
   // },
+   {
+    id: "barvaron",
+    title: "BarVaron",
+    subtitle: "Barbería y estética masculina · sitio web a medida",
+    description:
+      "Sitio web para barberia",
+    href: "https://www.barvaron.cl",
+    mainImage: {
+      src: barvaraonImage,
+      alt: "Vista previa del sitio de BarVaron",
+      href: "https://www.barvaron.cl",
+    },
+    highlights: [
+      "Dirección visual y diseño editorial a medida",
+      "Presentación de servicios, sucursales y profesionales",
+      "Conexión con AgendaPro para reservas online",
+      "SEO técnico y medición con Google Analytics",
+  ],
+    stack: ["astro"],
+  },
   {
     id: "ranut",
     title: "Ranut",
@@ -40,7 +61,7 @@ export const workItems = [
     highlights: [
       "Landing page creada con Astro",
       "Contenido organizado por servicio",
-      "Diseño adaptable para celulares y escritorio",
+      "SEO técnico y medición con Google Analytics",
       "Gestión de contenido con Sanity",
     ],
     stack: ["astro", "sanity"],
@@ -81,7 +102,6 @@ export const workItems = [
     highlights: [
       "Landing page creada con Astro",
       "Contenido organizado por servicios y etapas del proceso",
-      "Diseño adaptable para celulares y escritorio",
       "Llamados a la acción para facilitar el contacto",
     ],
     stack: ["astro", "tailwind"],
